@@ -28,10 +28,7 @@ namespace MoviesHalløj
             DataContext = mvr;
         }
 
-        private void listBox1_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
+      
 
         private void showButten_Click(object sender, RoutedEventArgs e)
         {
@@ -41,9 +38,6 @@ namespace MoviesHalløj
 
         }
 
-        private void listBox1_SelectionChanged_1(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
+       
     }
 }

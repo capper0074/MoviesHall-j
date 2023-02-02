@@ -10,7 +10,7 @@ namespace MoviesHalløj.MVVM.Model
 {
     public class MovieRepo
     {
-        private string filePath = @"..\Data\Data.txt";
+        private string filePath = @"..\..\..\Data\Data.txt";
 
         List<Movie> movies = new List<Movie>();
 
@@ -24,7 +24,7 @@ namespace MoviesHalløj.MVVM.Model
                 {
                     while((text = sr.ReadLine()) != null)
                     {
-                        string[] data = text.Split(",", StringSplitOptions.RemoveEmptyEntries);
+                        string[] data = text.Split(";", StringSplitOptions.RemoveEmptyEntries);
                         Movie newMovie = new Movie(data[3]);
                         movies.Add(newMovie);
                     }
@@ -36,7 +36,11 @@ namespace MoviesHalløj.MVVM.Model
                 Console.WriteLine(e);
 
             }
+           
+
+            
         }
+
         public List<Movie> GetMovies()
         {
             return movies;

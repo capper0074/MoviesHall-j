@@ -40,6 +40,10 @@ namespace MoviesHalløj
             listBox1.ItemsSource = mvrep.GetMovies();
 
         }
-      
+
+        private void listBox1_SelectionChanged_1(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }

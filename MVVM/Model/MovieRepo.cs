@@ -25,7 +25,7 @@ namespace MoviesHalløj.MVVM.Model
                     while((text = sr.ReadLine()) != null)
                     {
                         string[] data = text.Split(";", StringSplitOptions.RemoveEmptyEntries);
-                        Movie newMovie = new Movie(data[3]);
+                        Movie newMovie = new Movie(data[3], data[2]);
                         movies.Add(newMovie);
                     }
                 }

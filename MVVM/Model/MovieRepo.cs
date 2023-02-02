@@ -11,7 +11,7 @@ namespace MoviesHalløj.MVVM.Model
     {
         private string filePath = @"";
 
-        List<string> Strings = new List<string>();
+        List<Movie> movies = new List<Movie>();
 
         public void load()
         {
@@ -24,8 +24,8 @@ namespace MoviesHalløj.MVVM.Model
                     while((text = sr.ReadLine()) != null)
                     {
                         string[] data = text.Split(",", StringSplitOptions.RemoveEmptyEntries);
-                        string name = data[3];
-                        Strings.Add(name);
+                        Movie newMovie = new Movie(data[3]);
+                        movies.Add(newMovie);
                     }
                 }
 
@@ -38,9 +38,9 @@ namespace MoviesHalløj.MVVM.Model
         }
         public void GetMovies()
         {
-            for (int i = 0; i < Strings.Count; i++)
+            for (int i = 0; i < movies.Count; i++)
             {
-                Console.WriteLine(Strings[i]);
+                Console.WriteLine(movies[i].ToString());
             }
         }
     }

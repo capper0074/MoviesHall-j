@@ -11,12 +11,18 @@ namespace MoviesHalløj.MVVM.Model
         public string MovieName { get; }
 
 
-        //dsf
-
         public Movie(string movieName)
         {
             MovieName = movieName;
 
         }
+
+        public override string ToString()
+        {
+            return MovieName;
+        }
+        
+
+        
     }
 }

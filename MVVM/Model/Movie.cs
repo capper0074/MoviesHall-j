@@ -11,7 +11,7 @@ namespace MoviesHalløj.MVVM.Model
         public string MovieName { get; }
 
 
-        //asd
+        //dsf
 
         public Movie(string movieName)
         {

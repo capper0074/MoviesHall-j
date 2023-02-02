@@ -9,12 +9,12 @@ namespace MoviesHalløj.MVVM.Model
     public class Movie
     {
         public string MovieName { get; }
+        public string MovieTime { get; }
 
-
-        public Movie(string movieName)
+        public Movie(string movieName, string dateTime)
         {
             MovieName = movieName;
-
+            MovieTime = dateTime;
         }
 
         public override string ToString()

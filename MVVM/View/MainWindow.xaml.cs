@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MoviesHalløj.MVVM.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,22 @@ namespace MoviesHalløj
         public MainWindow()
         {
             InitializeComponent();
+            MovieRepo mvr = new MovieRepo();
+            DataContext = mvr;
         }
+
+        private void listBox1_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void showButten_Click(object sender, RoutedEventArgs e)
+        {
+            MovieRepo mvrep = new MovieRepo();
+            mvrep.load();
+            listBox1.ItemsSource = mvrep.GetMovies();
+
+        }
+      
     }
 }

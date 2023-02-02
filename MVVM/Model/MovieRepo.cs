@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -9,7 +10,7 @@ namespace MoviesHalløj.MVVM.Model
 {
     public class MovieRepo
     {
-        private string filePath = @"";
+        private string filePath = @"..\Data\Data.txt";
 
         List<Movie> movies = new List<Movie>();
 
@@ -36,12 +37,9 @@ namespace MoviesHalløj.MVVM.Model
 
             }
         }
-        public void GetMovies()
+        public List<Movie> GetMovies()
         {
-            for (int i = 0; i < movies.Count; i++)
-            {
-                Console.WriteLine(movies[i].ToString());
-            }
+            return movies;
         }
     }
 

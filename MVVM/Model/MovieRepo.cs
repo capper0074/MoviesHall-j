@@ -12,12 +12,11 @@ namespace MoviesHalløj.MVVM.Model
     {
         private string filePath = @"..\..\..\Data\Data.txt";
 
-        List<Movie> movies = new List<Movie>();
+        public List<Movie> movies = new List<Movie>();
 
         public void load()
         {
             string text;
-
             try
             {
                 using (StreamReader sr = new StreamReader(filePath))
@@ -29,18 +28,12 @@ namespace MoviesHalløj.MVVM.Model
                         movies.Add(newMovie);
                     }
                 }
-
             }
             catch(Exception e)
             {
                 Console.WriteLine(e);
-
             }
-           
-
-            
         }
-
         public List<Movie> GetMovies()
         {
             return movies;

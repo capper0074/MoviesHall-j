@@ -1,4 +1,5 @@
 ﻿using MoviesHalløj.MVVM.Model;
+using MoviesHalløj.MVVM.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,18 +25,16 @@ namespace MoviesHalløj
         public MainWindow()
         {
             InitializeComponent();
-            MovieRepo mvr = new MovieRepo();
-            DataContext = mvr;
+            MovieViewModel mvm = new MovieViewModel();
+            DataContext = mvm;
         }
 
       
 
         private void showButten_Click(object sender, RoutedEventArgs e)
         {
-            MovieRepo mvrep = new MovieRepo();
-            mvrep.load();
-            listBox1.ItemsSource = mvrep.GetMovies();
-
+            MovieViewModel model = new MovieViewModel();
+            listBox1.ItemsSource = model.GetAllMovies();
         }
 
        

@@ -37,6 +37,12 @@ namespace MoviesHalløj
             listBox1.ItemsSource = model.GetAllMovies();
         }
 
-       
+        private void createMovie(object sender, RoutedEventArgs e)
+        {
+            MovieViewModel model = new MovieViewModel();
+            model.CreateMovie(TB1.Text, TB2.Text);
+            TB1.Text = "";
+            TB2.Text = "";
+        }
     }
 }

@@ -8,14 +8,26 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid Background="#FF0F0F0F">
         <Frame Content="" x:Name="mainFrame" NavigationUIVisibility="Hidden" Margin="0,-13,0,0"/>
-        <Button x:Name="showButten" Content="Show" HorizontalAlignment="Left" Margin="491,191,0,0" VerticalAlignment="Top" Height="43" Width="138" Click="showButten_Click" Background="#FFFF4100">
-            <Button.BorderBrush>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="Black"/>
-                    <GradientStop Color="#FFF7F7F7" Offset="1"/>
-                </LinearGradientBrush>
-            </Button.BorderBrush>
-        </Button>
+        <StackPanel>
+            <Button x:Name="showButten" Content="Show" HorizontalAlignment="Left" Margin="491,191,0,0" VerticalAlignment="Top" Height="43" Width="138" Click="showButten_Click" Background="#FFFF4100">
+                <Button.BorderBrush>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Black"/>
+                        <GradientStop Color="#FFF7F7F7" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.BorderBrush>
+            </Button>
+            <TextBox x:Name="TB1" TextWrapping="Wrap" Width="120"/>
+            <TextBox x:Name="TB2" TextWrapping="Wrap" Width="120"/>
+            <Button x:Name="create_button" Content="Create Movie" Height="29" Width="111" Click="createMovie" Background="#FFFF4100">
+                <Button.BorderBrush>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Black"/>
+                        <GradientStop Color="#FFF7F7F7" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.BorderBrush>
+            </Button>
+        </StackPanel>
         <ListBox x:Name="listBox1" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="10,0,460,0" Background="#FFFF4100" BorderBrush="#7CE3E3E3"/>
 
 
